@@ -28,6 +28,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./projects 
+          context: ./project
           push: true
           tags: ThinhTT84/techtrends:latest
