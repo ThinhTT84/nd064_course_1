@@ -1,11 +1,58 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build --tag techtrends . 
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends:latest 
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker logs -f cbfd8110023db1290e5aa68afb0638f09954fd768f92b242dfcf74bf574878fe 
 
-## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+## Logs from the container running the TechTrends application * Serving Flask app 'app' (lazy loading)
+* Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+INFO:werkzeug:2022-05-27 16:55:54,568:  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://172.17.0.2:3111 (Press CTRL+C to quit)
+INFO:werkzeug:2022-05-27 16:56:02,645: 172.17.0.1 - - [27/May/2022 16:56:02] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 16:56:02,673: 172.17.0.1 - - [27/May/2022 16:56:02] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:2022-05-27 16:56:04,949: 172.17.0.1 - - [27/May/2022 16:56:04] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 16:56:04,967: 172.17.0.1 - - [27/May/2022 16:56:04] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:2022-05-27 16:56:08,066: 172.17.0.1 - - [27/May/2022 16:56:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 16:56:08,077: 172.17.0.1 - - [27/May/2022 16:56:08] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:app:2022-05-27 16:56:12,353: "About Us" page is retrieved!
+INFO:werkzeug:2022-05-27 16:56:12,355: 172.17.0.1 - - [27/May/2022 16:56:12] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 16:56:12,366: 172.17.0.1 - - [27/May/2022 16:56:12] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2022-05-27 16:56:17,796: 172.17.0.1 - - [27/May/2022 16:56:17] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 16:56:22,482: 172.17.0.1 - - [27/May/2022 16:56:22] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 16:56:22,506: 172.17.0.1 - - [27/May/2022 16:56:22] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2022-05-27 16:56:27,045: New article "ThinhTT testing" is created!
+INFO:werkzeug:2022-05-27 16:56:27,046: 172.17.0.1 - - [27/May/2022 16:56:27] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:2022-05-27 16:56:27,053: 172.17.0.1 - - [27/May/2022 16:56:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 16:56:27,073: 172.17.0.1 - - [27/May/2022 16:56:27] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2022-05-27 16:56:28,927: Article "ThinhTT testing" retrieved!
+INFO:werkzeug:2022-05-27 16:56:28,935: 172.17.0.1 - - [27/May/2022 16:56:28] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 16:56:28,951: 172.17.0.1 - - [27/May/2022 16:56:28] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2022-05-27 16:56:31,115: "About Us" page is retrieved!
+INFO:werkzeug:2022-05-27 16:56:31,117: 172.17.0.1 - - [27/May/2022 16:56:31] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 16:56:31,150: 172.17.0.1 - - [27/May/2022 16:56:31] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2022-05-27 16:56:33,615: 172.17.0.1 - - [27/May/2022 16:56:33] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 16:59:30,904: 172.17.0.1 - - [27/May/2022 16:59:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 16:59:30,914: 172.17.0.1 - - [27/May/2022 16:59:30] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2022-05-27 17:00:33,405: Article "ThinhTT testing" retrieved!
+INFO:werkzeug:2022-05-27 17:00:33,406: 172.17.0.1 - - [27/May/2022 17:00:33] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 17:00:33,421: 172.17.0.1 - - [27/May/2022 17:00:33] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2022-05-27 17:01:01,185: "About Us" page is retrieved!
+INFO:werkzeug:2022-05-27 17:01:01,186: 172.17.0.1 - - [27/May/2022 17:01:01] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 17:01:01,199: 172.17.0.1 - - [27/May/2022 17:01:01] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2022-05-27 17:02:00,776: 172.17.0.1 - - [27/May/2022 17:02:00] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 17:02:00,795: 172.17.0.1 - - [27/May/2022 17:02:00] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2022-05-27 17:02:14,007: New article "New post again" is created!
+INFO:werkzeug:2022-05-27 17:02:14,008: 172.17.0.1 - - [27/May/2022 17:02:14] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:2022-05-27 17:02:14,023: 172.17.0.1 - - [27/May/2022 17:02:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 17:02:14,051: 172.17.0.1 - - [27/May/2022 17:02:14] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2022-05-27 17:02:25,603: 172.17.0.1 - - [27/May/2022 17:02:25] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:2022-05-27 17:02:34,408: 172.17.0.1 - - [27/May/2022 17:02:34] "GET /metrics HTTP/1.1" 200 -
