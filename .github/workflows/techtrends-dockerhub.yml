@@ -30,4 +30,4 @@ jobs:
         with:
           context: ./project
           push: true
-          tags: ThinhTT84/techtrends:latest
+          tags: thinhtt84/techtrends:latest
