@@ -93,11 +93,21 @@ def create():
 
 @app.route("/healthz")
 def status():
+    statusCode = 200
+    healthResult = "OK - healthy"
+
+    try:
+        get_total_posts()
+    except Exception:
+        statusCode = 500
+        healthResult = "ERROR - unhealthy"
+
     response = app.response_class(
-        response=json.dumps({"result": "OK - healthy"}),
-        status=200,
+        response=json.dumps({"result": healthResult}),
+        status=statusCode,
         mimetype='application/json'
     )
+    
     return response
 
 
